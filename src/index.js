@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import MySection from "./Mysection"
 import Mybutton from './MyButton';
 import MyComponent from './MyComponent';
 import MyComponent2 from './Mycomponent2';
+
+import MyButton1 from './Mybutton1';
+import Mylist from './MyList';
+import MyBotton2 from './Mybutton2';
+import App from './App';
+import MyInput from './MyInput';
 
 const array=["first","second","third"];
 const object={
@@ -83,6 +88,63 @@ root.render(
 root.render(<MyComponent />)
 
 root.render(<MyComponent2 />)
+
+
+
+/*
+const appState ={
+  text: "My Button",
+  disabled: true,
+  items: ["First","Second","Third"],
+}
+function render( props){
+  root.render(
+    <main>
+      <MyButton1 text={props.text} disabled={props.disabled} />
+      <Mylist items={props.items}  />
+    </main>
+  )
+
+}
+
+
+render(appState);
+setTimeout(() =>{
+  appState.disabled=false;
+  appState.items.push("Fourth");
+
+  render(appState);
+}, 1000);
+
+
+
+function render({ second }){
+  root.render(
+   <main>
+    <MyBotton2/>
+    <MyBotton2 text={second.text} disabled={second.disabled} />
+   </main>
+  );
+}
+render({
+  second:{
+    text: "Second Button",
+    disabled: true,
+  }
+});
+*/
+//bai 2
+const root1 = ReactDOM.createRoot(document.getElementById('root'));
+
+root1.render(<App/>);
+
+//Bai 3
+/*
+root.render(  <main>
+  <MyInput/>
+ </main>
+);
+*/
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
